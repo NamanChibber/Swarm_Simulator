@@ -1,0 +1,20 @@
+11-10-2024 17:03:35 PM - DEBUG: Logging Start
+11-10-2024 17:03:35 PM - DEBUG: Connected to 10.78.31.1:9200
+11-10-2024 17:03:36 PM - DEBUG: Sent: AT*SENDIMS$
+11-10-2024 17:03:36 PM - DEBUG: Received: +++AT$:138:AT*SENDIMS[,<pid>],<len>,<dst>,[<timestamp>],<data>
+Send synchronous instant message to a remote device with
+destination address <dst>
+
+
+11-10-2024 17:03:37 PM - DEBUG: Sent: ATZ4
+11-10-2024 17:03:37 PM - DEBUG: Received: +++ATZ:2:OK
+
+11-10-2024 17:03:38 PM - DEBUG: Sent: AT*SENDIM,4,2,ack,test
+11-10-2024 17:03:38 PM - DEBUG: Received: +++AT*SENDIM:2:OK
+
+11-10-2024 17:03:39 PM - DEBUG: Sent: +++ATN/n
+11-10-2024 17:03:39 PM - DEBUG: Received: +++AT:13:DELIVEREDIM,2
++++AT:139:USBLLONG,1728646558.310445,1728646558.186098,2,-399.9745,-0.5124,0.5721,-399.9745,-0.5124,0.5721,0.0000,0.0000,0.0000,266666,-81,120,1.7349
+
+11-10-2024 17:03:40 PM - DEBUG: Received: +++AT:10:DROPCNT,61
+
