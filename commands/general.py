@@ -34,18 +34,18 @@ def clear_transmission_buffer(modem):
     at_cmd = "ATZ4"
     modem.send_command(at_cmd)
     
-def view_firmware_version(modem):
+def get_firmware_version(modem):
     at_cmd = "ATI0"
     modem.send_command(at_cmd)
     
-def view_physical_datalink_version(modem):
+def get_physical_datalink_version(modem):
     at_cmd = "ATI1"
     modem.send_command(at_cmd)
     
-def view_serial_number(modem):
+def get_serial_number(modem):
     at_cmd = "ATI2"
     modem.send_command(at_cmd)
     
-def view_device_manufacturer(modem):
+def get_device_manufacturer(modem):
     at_cmd = "ATI7"
     modem.send_command(at_cmd)
