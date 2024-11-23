@@ -1,8 +1,8 @@
-import ATCommands.DataControl as DataControl
-import ATCommands.Settings.Global as Global
-import ATCommands.Settings.InterfaceAndDataChannel as InterfaceAndDataChannel
-from Helpers.MessageFormat import *
-from Helpers import Modem
+import commands.DataControl as DataControl
+import commands.Settings.Global as Global
+import commands.Settings.InterfaceAndDataChannel as InterfaceAndDataChannel
+from util.MessageFormat import *
+from util import Modem
 
 import threading
 import time
