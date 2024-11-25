@@ -9,6 +9,7 @@ The `ATCommWrapper` library facilitates communication between nodes using AT com
 2. [Usage](#usage)
 3. [Features](#features)
 4. [Message Types](#message-types)
+5. [How To Use](#how-to-use)
 
 ---
 
@@ -38,3 +39,12 @@ Clone the repository:
 * RECVPBM: Phone book message.
 * DELIVEREDIM: Delivery acknowledgment.
 * *TODO: ADD SUPPORT FOR MORE MESSAGE TYPES*
+* *TODO: ADD SUPPROT FOR SERIAL COMMUNICATION WITH MODEM*
+
+## **How To Use**
+1. Connect to the DMACE emulator or the acoustic modem over WiFi or LAN (Follow instructions in emulator documentation).
+2. Create a Network Agent similar to the template given in `simulation.py`.
+3. Add logic for all the different nodes.
+4. Run it as you would a normal python script. (≥Python 3.8)
+
+Note: For additional information about the functions and their details, refer to the manual that came along with the emulator/modem.
