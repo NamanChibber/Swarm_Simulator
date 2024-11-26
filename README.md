@@ -39,7 +39,7 @@ Clone the repository:
 * RECVPBM: Phone book message.
 * DELIVEREDIM: Delivery acknowledgment.
 * *TODO: ADD SUPPORT FOR MORE MESSAGE TYPES*
-* *TODO: ADD SUPPROT FOR SERIAL COMMUNICATION WITH MODEM*
+* *TODO: ADD SUPPORT FOR SERIAL COMMUNICATION WITH MODEM*
 
 ## **How To Use**
 1. Connect to the DMACE emulator or the acoustic modem over WiFi or LAN (Follow instructions in emulator documentation).
