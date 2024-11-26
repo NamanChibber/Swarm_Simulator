@@ -36,7 +36,7 @@ Clone the repository:
 * ERROR: Error response.
 * RECVIM: Instant message with various parameters (length, source, destination, etc.).
 * RECVIMS: Scheduled instant message.
-* RECVPBM: Phone book message.
+* RECVPBM: Piggyback message.
 * DELIVEREDIM: Delivery acknowledgment.
 * *TODO: ADD SUPPORT FOR MORE MESSAGE TYPES*
 * *TODO: ADD SUPPORT FOR SERIAL COMMUNICATION WITH MODEM*
