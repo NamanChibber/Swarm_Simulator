@@ -2,7 +2,7 @@ from util.MessageFormat import *
 
 def parser(msg):
     rmsg = msg
-    msg = msg.split(':',2)[2].split(",")
+    msg = msg.split(':',2)[2].split(',', 9)
     
     if "OK" == msg[0]:
         recv = OK(rmsg.split(":")[0])

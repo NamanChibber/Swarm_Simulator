@@ -24,7 +24,9 @@ logging.basicConfig(filename=log_file, filemode="w", level=logging.DEBUG,
 logging.debug("Logging Start")
 
 class Modem:
+    # this is not a constructor but a method
     def init(self, host_ip, node_id, port):
+        # print("shjiler",node_id)
         try:
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.socket.connect((host_ip+str(node_id), port))
@@ -64,6 +66,7 @@ class Modem:
                     data = self.socket.recv(2048).decode()
                     data = data.replace('\n',"").replace('\r',"").replace('+++',"")
                     logging.debug(f"N{self.node_id}@Received: {data}")
+                    print(data)
                     self.receive_message(parser(data))
             except Exception as e:
                 logging.error(f"N{self.node_id}@Error receiving data: {e}")
