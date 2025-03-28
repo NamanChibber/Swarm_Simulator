@@ -12,7 +12,7 @@ class Agent(Modem.Modem):
         super().__init__()  # Initialize the parent Modem class
         self.node_id = node_id
         self.init(host_ip, node_id, port)
-        Global.set_promiscuous_mode(self, 0)  # Set promiscuous mode to off
+        Global.set_promiscuous_mode(self, 0)  # Sereceive_datat promiscuous mode to off
         InterfaceAndDataChannel.set_position_data_output_setting(self, 0)  # Disable position data output
 
     def send_msg(self, destination_id, ctx):
@@ -50,10 +50,7 @@ class Agent(Modem.Modem):
     def run(self):
         """Run the agent to listen for incoming messages."""
         print(f"Agent {self.node_id} running...")
-        while True:
-            incoming_msg = self.listen_for_message()  # Hypothetical method for receiving messages
-            if incoming_msg:
-                self.receive_message(incoming_msg)
+
 
     def __call__(self):
         """Allows instance to be callable in threading."""
