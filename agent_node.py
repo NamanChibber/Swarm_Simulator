@@ -7,6 +7,8 @@ import os
 
 # Import the modified Agent class
 from simulation3 import Agent
+from farol_msgs.msg import mState as State
+
 
 class AgentNode(Agent):
     """
@@ -34,8 +36,11 @@ class AgentNode(Agent):
 
         # Initialize the ROS node with a unique name based on the source_id.
         rospy.init_node(f'agent_node_{self.source_id}', anonymous=True)
-        # Subscribe to the provided sensor topic.
-        rospy.Subscriber(self.sensor_topic, ROSString, self.sensor_callback)
+        # Original:
+        # rospy.Subscriber(self.sensor_topic, ROSString, self.sensor_callback)
+        # Updated:
+        rospy.Subscriber(self.sensor_topic, State, self.sensor_callback)
+
         # Create a publisher for the given publisher topic.
         self.pub = rospy.Publisher(self.publisher_topic, ROSString, queue_size=10)
 
@@ -66,7 +71,10 @@ class AgentNode(Agent):
 
         :param msg: ROS message of type String.
         """
-        self.sensor_data = msg.data
+        x = msg.X
+        y = msg.Y
+        z = msg.Z
+        self.sensor_data = f"S{self.source_id} - x: {x:.2f}, y: {y:.2f}, z: {z:.2f}"
 
     def publish_received(self):
         """
