@@ -3,7 +3,7 @@ from agent_node import AgentNode  # Ensure agent_node.py is in the same director
 
 # Parameters for the agent: source, sensor_topic, destination, and publisher_topic.
 source = 1
-sensor_topic = "sensor1"  # Topic for sensor data subscription
+sensor_topic = "/bluerov_heavy0/State"  # Topic for sensor data subscription
 destination = 2
 publisher_topic = "node1_received"  # Topic to publish received messages
 

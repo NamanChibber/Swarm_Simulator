@@ -74,7 +74,8 @@ class AgentNode(Agent):
         x = msg.X
         y = msg.Y
         z = msg.Z
-        self.sensor_data = f"S{self.source_id} - x: {x:.2f}, y: {y:.2f}, z: {z:.2f}"
+        yaw = msg.Yaw
+        self.sensor_data = f"S{self.source_id} - x: {x:.0f}, y: {y:.0f}, z: {z:.0f}, yaw: {yaw:.0f}"
 
     def publish_received(self):
         """
